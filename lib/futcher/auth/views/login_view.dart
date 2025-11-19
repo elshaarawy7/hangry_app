@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hangry_app/core/constants/app_color.dart';
+import 'package:hangry_app/futcher/auth/widgets/custem_auth_batton.dart';
 import 'package:hangry_app/futcher/shared/custem_text.dart';
 import 'package:hangry_app/futcher/shared/custem_text_filed.dart';
 import 'package:svg_flutter/svg_flutter.dart';
@@ -23,31 +24,43 @@ class LoginView extends StatelessWidget {
         body: Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
-            child: Column(
-              children: [
-                Gap(100),
-                SvgPicture.asset("assets/logo/logo.svg"),
-                Gap(10),
-                CustemText(
-                  text: "Welcome Back , Discover That Fast Food",
-                  color: Colors.white,
-                  size: 13,
-                  weight: FontWeight.w500,
-                ),
-
-                Gap(100),
-
-                CustemTextFiled(
-                  hintText: "Email Adrees",
-                  controller: emailContrloer,
-                ),
-                Gap(20),
-                CustemTextFiled(
-                  hintText: "Password",
-                  controller: passowrdContrloer,
-                  isPassowrd: true,
-                ),
-              ],
+            child: Form(
+              key: formkay ,
+              child: Column(
+                children: [
+                  Gap(100),
+                  SvgPicture.asset("assets/logo/logo.svg"),
+                  Gap(10),
+                  CustemText(
+                    text: "Welcome Back , Discover That Fast Food",
+                    color: Colors.white,
+                    size: 13,
+                    weight: FontWeight.w500,
+                  ),
+              
+                  Gap(100),
+              
+                  CustemTextFiled(
+                    hintText: "Email Adrees",
+                    controller: emailContrloer,
+                  ),
+                  Gap(20),
+                  CustemTextFiled(
+                    hintText: "Password",
+                    controller: passowrdContrloer,
+                    isPassowrd: true,
+                  ), 
+              
+                  Gap(30) , 
+                  Custem_Auth_Batton(
+                    onTap: () {
+                      if(formkay.currentState!.validate()){
+                        
+                      }
+                    },
+                    text: "Login")
+                ],
+              ),
             ),
           ),
         ),

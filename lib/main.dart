@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hangry_app/futcher/auth/views/login_view.dart';
+import 'package:hangry_app/futcher/auth/views/singin_view.dart';
 
 void main() {
   runApp(const HungryApp());
@@ -14,7 +15,7 @@ class HungryApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hungry App',
-      home: LoginView() , 
+      home: SinginView() , 
     );
   }
 }
