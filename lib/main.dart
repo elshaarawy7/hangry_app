@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hangry_app/futcher/home/view/home_view.dart';
+import 'package:hangry_app/root.dart';
 
 void main() {
   runApp(const HungryApp());
@@ -14,7 +15,7 @@ class HungryApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hungry App',
-      home: HomeView() , 
+      home:Root()  
     );
   }
 }
