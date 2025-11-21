@@ -35,7 +35,7 @@ class _RootState extends State<Root> {
       body: PageView(
         controller:  controller ,
         children:screans ,
-
+        physics: NeverScrollableScrollPhysics(),
         
       ), 
 
