@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hangry_app/core/constants/app_color.dart';
 import 'package:hangry_app/futcher/home/widgets/cart_item.dart';
+import 'package:hangry_app/futcher/home/widgets/food_catogry.dart';
 import 'package:hangry_app/futcher/home/widgets/user_header.dart';
 import 'package:hangry_app/futcher/shared/custem_text.dart';
-import 'package:svg_flutter/svg.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -38,46 +37,12 @@ class _HomeViewState extends State<HomeView> {
                   Gap(25),
             
                   // search bar
-               
+                 SearchBar() , 
             
                   Gap(20),
             
                   // catogry
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: List.generate(catogry.length, (index) {
-                        return GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              selectedIndex = index;
-                            });
-                          },
-                          child: Container(
-                            margin: EdgeInsets.only(left: 8),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: selectedIndex == index
-                                  ? AppColor.primery
-                                  : Color(0xffF3F4F6),
-                            ),
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 27,
-                              vertical: 18,
-                            ),
-                            child: CustemText(
-                              text: catogry[index],
-                              color: selectedIndex == index
-                                  ? Colors.white
-                                  : Colors.black,
-                              size: 16,
-                              weight: FontWeight.bold,
-                            ),
-                          ),
-                        );
-                      }),
-                    ),
-                  ),
+                  FoodCatogry(catogry:  catogry , selectedIndex:  selectedIndex,)
                   ],
                 ),
               ), 
