@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hangry_app/core/constants/app_color.dart';
 import 'package:hangry_app/futcher/home/widgets/cart_item.dart';
+import 'package:hangry_app/futcher/home/widgets/user_header.dart';
 import 'package:hangry_app/futcher/shared/custem_text.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -32,57 +33,12 @@ class _HomeViewState extends State<HomeView> {
                     Gap(60),
             
                   /// header
-                  Row(
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SvgPicture.asset(
-                            "assets/logo/logo.svg",
-                            color: AppColor.primery,
-                            height: 40,
-                          ),
-            
-                          Gap(5),
-            
-                          CustemText(
-                            text: " Hello , Elshaarawy",
-                            color: Colors.grey.shade500,
-                            size: 20,
-                            weight: FontWeight.w500,
-                          ),
-                        ],
-                      ),
-                      Spacer(),
-            
-                      CircleAvatar(radius: 30),
-                    ],
-                  ),
+                UserHeader(),
             
                   Gap(25),
             
                   // search bar
-                  Material(
-                    elevation: 2,
-                    borderRadius: BorderRadius.circular(15),
-                    shadowColor: Colors.grey,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        fillColor: Colors.white,
-                        filled: true,
-                        hintText: 'search...',
-                        prefix: Icon(CupertinoIcons.search),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15),
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15),
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ),
+               
             
                   Gap(20),
             
