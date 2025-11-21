@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hangry_app/futcher/home/view/home_view.dart';
 import 'package:hangry_app/root.dart';
 
 void main() {
@@ -14,6 +13,9 @@ class HungryApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white
+      ),
       title: 'Hungry App',
       home:Root()  
     );
