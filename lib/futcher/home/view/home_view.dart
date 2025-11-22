@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:hangry_app/futcher/home/widgets/cart_item.dart';
 import 'package:hangry_app/futcher/home/widgets/food_catogry.dart';
 import 'package:hangry_app/futcher/home/widgets/user_header.dart';
+import 'package:hangry_app/futcher/prodact/views/prodacts_detiles_views.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -33,17 +34,8 @@ class _HomeViewState extends State<HomeView> {
                 automaticallyImplyLeading: false,
                 toolbarHeight: 200,
                 flexibleSpace: Padding(
-                  padding:EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 35,
-                  ),
-                  child: Column(
-                    children: [
-                      UserHeader(),
-                       Gap(20), 
-                       SearchBar() , 
-                       
-                  ]),
+                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 35),
+                  child: Column(children: [UserHeader(), Gap(20), SearchBar()]),
                 ),
               ),
 
@@ -56,7 +48,7 @@ class _HomeViewState extends State<HomeView> {
 
               // gride view
               SliverPadding(
-                padding: EdgeInsets.symmetric(horizontal: 15 , vertical: 15),
+                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                 sliver: SliverGrid(
                   delegate: SliverChildBuilderDelegate(childCount: 6, (
                     context,
@@ -64,7 +56,14 @@ class _HomeViewState extends State<HomeView> {
                   ) {
                     return GestureDetector(
                       onTap: () {
-                        
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return ProdactsDetilesViews();
+                            },
+                          ),
+                        );
                       },
                       child: CartItem(
                         image: 'assets/test/image 6.png',
