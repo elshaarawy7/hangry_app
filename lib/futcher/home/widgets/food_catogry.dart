@@ -6,7 +6,7 @@ import 'package:hangry_app/futcher/shared/custem_text.dart';
 class FoodCatogry extends StatefulWidget {
   FoodCatogry({super.key, required this.catogry , required this.selectedIndex}); 
 
-   late  int  selectedIndex  = 0 ; 
+   final  int  selectedIndex ; 
 
   final List catogry  ;
 
@@ -14,7 +14,14 @@ class FoodCatogry extends StatefulWidget {
   State<FoodCatogry> createState() => _FoodCatogryState();
 }
 
-class _FoodCatogryState extends State<FoodCatogry> { 
+class _FoodCatogryState extends State<FoodCatogry> {  
+
+  late int  selectedIndex  ; 
+
+  void initState(){
+    selectedIndex = widget.selectedIndex ;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +32,14 @@ class _FoodCatogryState extends State<FoodCatogry> {
                         return GestureDetector(
                           onTap: () {
                             setState(() {
-                           widget.selectedIndex = index ;
+                       selectedIndex = index ;
                             });
                           },
                           child: Container(
                             margin: EdgeInsets.only(left: 8),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              color:widget.selectedIndex == index
+                              color:selectedIndex == index
                                   ? AppColor.primery
                                   : Color(0xffF3F4F6),
                             ),
@@ -42,7 +49,7 @@ class _FoodCatogryState extends State<FoodCatogry> {
                             ),
                             child: CustemText(
                               text:widget.catogry[index],
-                              color:widget.selectedIndex == index
+                              color:selectedIndex == index
                                   ? Colors.white
                                   : Colors.black,
                               size: 16,

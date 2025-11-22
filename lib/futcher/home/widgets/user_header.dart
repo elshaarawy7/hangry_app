@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hangry_app/core/constants/app_color.dart';
@@ -11,6 +10,7 @@ class UserHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return   Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
