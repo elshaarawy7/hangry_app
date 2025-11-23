@@ -5,7 +5,10 @@ import 'package:hangry_app/core/constants/app_color.dart';
 import 'package:hangry_app/futcher/shared/custem_text.dart';
 
 class SpicyDetiles extends StatelessWidget {
-  const SpicyDetiles({super.key});
+  const SpicyDetiles({super.key, required this.value, required this.onChanged}); 
+
+  final double value ; 
+  final ValueChanged<double> onChanged ; 
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +31,8 @@ class SpicyDetiles extends StatelessWidget {
                      Gap(5) , 
 
                      Slider(
-                      value: 0.7,
-                       onChanged: (v){
-
-                       } ,  
+                      value: value,
+                       onChanged: onChanged  ,  
 
                        activeColor: AppColor.primery,
                        
