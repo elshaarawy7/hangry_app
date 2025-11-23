@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:hangry_app/futcher/prodact/widgets/liste_view_builder_toping_card.dart';
 import 'package:hangry_app/futcher/prodact/widgets/spicy_detiles.dart';
 import 'package:hangry_app/futcher/prodact/widgets/toping_card.dart';
 import 'package:hangry_app/futcher/shared/custem_text.dart';
@@ -42,11 +43,7 @@ class _ProdactsDetilesViewsState extends State<ProdactsDetilesViews> {
 
             CustemText(text: 'Toppings', color: Colors.black, size: 20, weight: FontWeight.bold) , 
             Gap(10) , 
-            ToppingICard(
-              imagePath: 'assets/test/Group 31.png',
-               title: 'Tomato',
-                onAdd: () {  },
-                ) , 
+            ListeViewBuilderTopingCard()
           ],
         ),
       ),
