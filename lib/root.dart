@@ -4,7 +4,6 @@ import 'package:hangry_app/core/constants/app_color.dart';
 import 'package:hangry_app/futcher/auth/views/profile_view.dart';
 import 'package:hangry_app/futcher/cart/views/cart_view.dart';
 import 'package:hangry_app/futcher/home/view/home_view.dart';
-import 'package:hangry_app/futcher/order_history/views/order_history.dart';
 
 class Root extends StatefulWidget {
    Root({super.key});

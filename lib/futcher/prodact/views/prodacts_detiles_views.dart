@@ -64,7 +64,7 @@ class _ProdactsDetilesViewsState extends State<ProdactsDetilesViews> {
               ),
               Gap(10),
               ListeViewBuilderTopingCard(),
-              Gap(20),
+              Gap(30),
               CustemText(
                 text: "Total",
                 color: Colors.black,
@@ -74,20 +74,8 @@ class _ProdactsDetilesViewsState extends State<ProdactsDetilesViews> {
               Gap(30),
 
               // total and cart
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CustemText(
-                    text: r"$82.2",
-                    color: AppColor.primery,
-                    size: 30,
-                    weight: FontWeight.w500,
-                  ),
-
-                  Spacer(),
                   CustemCard(text: 'Add To Card') ,
-                ],
-              ),
+              
 
               SizedBox(height: 20),
             ],

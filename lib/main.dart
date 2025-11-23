@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hangry_app/futcher/cart/views/cart_view.dart';
 import 'package:hangry_app/root.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class HungryApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white
       ),
       title: 'Hungry App',
-      home:Root()  
+      home:Root()
     );
   }
 }
