@@ -8,35 +8,36 @@ class CheackOutVisi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100, 
-      width: double.infinity, 
+      height: 100,
+      width: double.infinity,
       child: Card(
-        color: Color(0xffF3F4F6), 
-        elevation: 1, 
-        shadowColor: Colors.black, 
+        color: Color(0xffF3F4F6),
+        elevation: 1,
+        shadowColor: Colors.black,
         child: Row(
-          
           children: [
-            Image.asset("assets/test/image 13.png") , 
-            Gap(20) , 
+            Image.asset("assets/test/image 13.png"),
+            Gap(20),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustemText(text: 
-                "Debit card", 
-                color: Colors.black, 
-                size: 16, 
-                weight: FontWeight.w600 , 
-              ) ,  
-              Gap(5) , 
-              CustemText(text: 
-                "3566 **** **** 0505", 
-                color: Colors.grey, 
-                size: 12, 
-                weight: FontWeight.normal , 
-              ) ,
-              ], 
-            )
+                CustemText(
+                  text: "Debit card",
+                  color: Colors.black,
+                  size: 16,
+                  weight: FontWeight.w600,
+                ),
+                Gap(5),
+                CustemText(
+                  text: "3566 **** **** 0505",
+                  color: Colors.grey,
+                  size: 12,
+                  weight: FontWeight.normal,
+                ),
+              ],
+            ), 
+
+             
           ],
         ),
       ),

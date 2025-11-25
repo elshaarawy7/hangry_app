@@ -23,8 +23,8 @@ class CustemCard extends StatelessWidget {
           ), 
           Spacer() , 
           Container(
-            height: 100,
-            width: 250,
+            height: 80,
+            width: 200,
             decoration: BoxDecoration(
               color: AppColor.primery,
               borderRadius: BorderRadius.circular(25),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:hangry_app/futcher/cheakout/widget/cheack_out_detiles.dart';
 import 'package:hangry_app/futcher/cheakout/widget/cheack_out_visi.dart';
 import 'package:hangry_app/futcher/cheakout/widget/payment_widget_mathode.dart';
+import 'package:hangry_app/futcher/shared/custem_card.dart';
 import 'package:hangry_app/futcher/shared/custem_text.dart';
 
 class CheackOutViews extends StatelessWidget {
@@ -33,33 +35,43 @@ class CheackOutViews extends StatelessWidget {
 
             Gap(10),
 
-            cheackoutWidget("Order", r"$16.85", false, false , false),
+            CheackOutDetiles() ,
 
-            Gap(5),
+            Gap(50),
 
-            cheackoutWidget("Taxes", r"$0.3", false, false , false),
+            CustemText(
+              text: "Payment methods",
+              color: Colors.black,
+              size: 18,
+              weight: FontWeight.bold,
+            ),
 
-            Gap(5),
-            cheackoutWidget("Delivery fees", r"$1.5", false, false ,  false),
-            Gap(10),
-            Divider(),
+            Gap(20),
+            PaymentWidgetMathode(),
 
-            Gap(10),
+            Gap(20),
+            CheackOutVisi(),
 
-            cheackoutWidget("Total", r"$18.19", true, true ,  false), 
-            Gap(10) , 
-  cheackoutWidget("Estimated delivery time:", "15 - 30 mins", true, true ,  true),  
+            Gap(20),
 
-  Gap(50) ,  
+            Gap(20),
 
-  CustemText(text: "Payment methods", color: Colors.black, size: 18, weight: FontWeight.bold) ,
+            Row(
+              children: [
+                Icon(Icons.check_box, size: 30, color: Colors.red),
+                Gap(5),
+                CustemText(
+                  text: "Save card details for future payments",
+                  color: Colors.grey,
+                  size: 16,
+                  weight: FontWeight.normal,
+                ),
+              ],
+            ),
 
-  Gap(20) , 
-  PaymentWidgetMathode() , 
+            Gap(20),
 
-  Gap(20) , 
-  CheackOutVisi()
-
+            CustemCard(text: "Pay Now"),
           ],
         ),
       ),
@@ -67,21 +79,21 @@ class CheackOutViews extends StatelessWidget {
   }
 }
 
-Widget cheackoutWidget(tital, price, isBold, color , size) {
+Widget cheackoutWidget(tital, price, isBold, color, size) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
       CustemText(
         text: tital,
         color: color ? Colors.black : Colors.grey,
-        size:size? 16 :  18,
+        size: size ? 16 : 18,
         weight: isBold ? FontWeight.bold : FontWeight.w500,
       ),
 
       CustemText(
         text: price,
         color: color ? Colors.black : Colors.grey,
-        size: size ? 16 :  18,
+        size: size ? 16 : 18,
         weight: isBold ? FontWeight.bold : FontWeight.w500,
       ),
     ],
