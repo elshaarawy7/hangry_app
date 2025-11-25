@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hangry_app/futcher/cart/widgets/list_view_builder_cart_item.dart';
+import 'package:hangry_app/futcher/cheakout/views/cheack_out_views.dart';
 import 'package:hangry_app/futcher/shared/custem_card.dart';
 import 'package:hangry_app/futcher/shared/custem_text.dart';
 
@@ -24,7 +25,14 @@ class CartView extends StatelessWidget {
                 ) ,
 
                 CustemText(text: "Total", color:Colors.black, size: 20, weight: FontWeight.bold) , 
-                CustemCard(text: 'Cheak out',)
+                CustemCard(
+                  text: 'Cheak out', 
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return CheackOutViews() ;
+                    })) ;
+                  },
+                  )
               ],
             ),
           ),
