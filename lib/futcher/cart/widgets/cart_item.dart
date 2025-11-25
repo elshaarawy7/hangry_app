@@ -52,6 +52,8 @@ class CartItemOrder extends StatelessWidget {
               children: [
                 Row(
                   children: [
+
+                    // remove baton 
                     GestureDetector(
                       onTap: onRemove,
                       child: CircleAvatar(
@@ -61,13 +63,17 @@ class CartItemOrder extends StatelessWidget {
                       ),
                     ), 
                     
-                    Gap(20) , 
+                    Gap(20) ,  
+
+                    // quintity
                     
                     Text("$quantity" , style: TextStyle(
                       color: Colors.black , 
                       fontSize: 20 , 
                       fontWeight: FontWeight.bold , 
-                    ),), 
+                    ),),  
+
+                    // add batton
 
                     Gap(20) , 
                      GestureDetector(
@@ -75,7 +81,7 @@ class CartItemOrder extends StatelessWidget {
                       child: CircleAvatar(
                         backgroundColor: AppColor.primery,
                         radius: 20,
-                        child: Icon(Icons.remove, size: 22, color: Colors.white),
+                        child: Icon(Icons.add, size: 22, color: Colors.white),
                       ),
                     ), 
                     

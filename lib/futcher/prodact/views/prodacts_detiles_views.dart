@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:hangry_app/core/constants/app_color.dart';
 import 'package:hangry_app/futcher/prodact/widgets/liste_view_builder_toping_card.dart';
 import 'package:hangry_app/futcher/prodact/widgets/spicy_detiles.dart';
 import 'package:hangry_app/futcher/shared/custem_card.dart';

@@ -4,6 +4,7 @@ import 'package:hangry_app/core/constants/app_color.dart';
 import 'package:hangry_app/futcher/auth/views/profile_view.dart';
 import 'package:hangry_app/futcher/cart/views/cart_view.dart';
 import 'package:hangry_app/futcher/home/view/home_view.dart';
+import 'package:hangry_app/futcher/order_history/views/order_histoty_view.dart';
 
 class Root extends StatefulWidget {
    Root({super.key});
@@ -22,7 +23,7 @@ class _RootState extends State<Root> {
     screans = [
     HomeView() , 
     CartView() , 
-    OrderHistory() , 
+    OrderHistotyView(), 
     ProfileView() , 
   ]; 
   controller = PageController(initialPage: curentScrean) ;
