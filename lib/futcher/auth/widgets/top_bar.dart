@@ -1,21 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
-import 'package:hangry_app/core/constants/app_color.dart';
 
-class ProfileView extends StatelessWidget {
-  const ProfileView({super.key});
+class TopBar extends StatelessWidget {
+  const TopBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.primery,  
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: Column(
-         
-          children: [
-            Gap(20) , 
-            Row(
+    return Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 IconButton(onPressed: (){
@@ -28,10 +19,6 @@ class ProfileView extends StatelessWidget {
 
 
               ],
-            )
-          ],
-        ),
-      ),
-    );
+            ) ; 
   }
 }
