@@ -5,6 +5,7 @@ import 'package:hangry_app/futcher/cheakout/widget/cheack_out_visi.dart';
 import 'package:hangry_app/futcher/cheakout/widget/payment_widget_mathode.dart';
 import 'package:hangry_app/futcher/shared/custem_card.dart';
 import 'package:hangry_app/futcher/shared/custem_text.dart';
+import 'package:hangry_app/futcher/sucsess/sucsess_page.dart';
 
 class CheackOutViews extends StatelessWidget {
   const CheackOutViews({super.key});
@@ -71,7 +72,13 @@ class CheackOutViews extends StatelessWidget {
 
             Gap(20),
 
-            CustemCard(text: "Pay Now"),
+            CustemCard(text: "Pay Now" ,
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+                return SuccessPage() ;
+              })) ;
+            },
+            ),
           ],
         ),
       ),

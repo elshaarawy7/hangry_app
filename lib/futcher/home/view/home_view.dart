@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hangry_app/futcher/home/widgets/cart_item.dart';
 import 'package:hangry_app/futcher/home/widgets/food_catogry.dart';
+import 'package:hangry_app/futcher/home/widgets/search_bar.dart';
 import 'package:hangry_app/futcher/home/widgets/user_header.dart';
 import 'package:hangry_app/futcher/prodact/views/prodacts_detiles_views.dart';
 
@@ -20,6 +21,7 @@ class _HomeViewState extends State<HomeView> {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
+        backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 50),
           child: CustomScrollView(
@@ -30,12 +32,18 @@ class _HomeViewState extends State<HomeView> {
                 scrolledUnderElevation: 0,
                 pinned: true,
                 floating: false,
-                backgroundColor: Colors.white,
+               backgroundColor: Colors.white,
                 automaticallyImplyLeading: false,
                 toolbarHeight: 200,
                 flexibleSpace: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 12, vertical: 35),
-                  child: Column(children: [UserHeader(), Gap(20), SearchBar()]),
+                  child: Column(children: [
+                    UserHeader(), 
+                    Gap(20), 
+
+                    SearchBarr()
+
+                     ]),
                 ),
               ),
 

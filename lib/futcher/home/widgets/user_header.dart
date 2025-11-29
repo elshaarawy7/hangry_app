@@ -33,7 +33,10 @@ class UserHeader extends StatelessWidget {
                       ),
                       Spacer(),
             
-                      CircleAvatar(radius: 30),
+                      CircleAvatar(
+                        radius: 35 , 
+                        backgroundImage: AssetImage("assets/profile/Jumaa Mubarakah.jpg"),
+                        ),
                     ],
                   );
   }
