@@ -11,34 +11,42 @@ class CheackOutVisi extends StatelessWidget {
       height: 100,
       width: double.infinity,
       child: Card(
+     
         color: Color(0xffF3F4F6),
         elevation: 1,
         shadowColor: Colors.black,
-        child: Row(
-          children: [
-            Image.asset("assets/test/image 13.png"),
-            Gap(20),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CustemText(
-                  text: "Debit card",
-                  color: Colors.black,
-                  size: 16,
-                  weight: FontWeight.w600,
-                ),
-                Gap(5),
-                CustemText(
-                  text: "3566 **** **** 0505",
-                  color: Colors.grey,
-                  size: 12,
-                  weight: FontWeight.normal,
-                ),
-              ],
-            ), 
-
-             
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Row(
+            children: [
+              Image.asset("assets/test/image 13.png"),
+              Gap(20),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustemText(
+                    text: "Debit card",
+                    color: Colors.black,
+                    size: 16,
+                    weight: FontWeight.w600,
+                  ),
+                  Gap(5),
+                  CustemText(
+                    text: "3566 **** **** 0505",
+                    color: Colors.grey,
+                    size: 12,
+                    weight: FontWeight.normal,
+                  ),
+                ],
+              ),   
+          
+              Spacer() ,
+          
+              Icon(Icons.radio_button_checked , size: 25, color: Colors.black,)
+          
+               
+            ],
+          ),
         ),
       ),
     );
